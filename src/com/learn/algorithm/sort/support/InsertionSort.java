@@ -14,9 +14,16 @@ public class InsertionSort extends Sort {
     @Override
     public int[] sort(int... arr) {
         for (int i = 1; i < arr.length; i++) {
-            for (int j = i; j > 0 && arr[j] < arr[j - 1]; j--) {
-                swap(arr, j, j - 1);
+            int temp = arr[i];
+            int j;
+            for (j = i; j > 0; j--) {
+                if (temp < arr[j - 1]) {
+                    arr[j] = arr[j - 1];
+                } else {
+                    break;
+                }
             }
+            arr[j] = temp;
         }
         return arr;
     }
