@@ -1,5 +1,7 @@
 package learn.algorithm.sort;
 
+import com.learn.algorithm.sort.support.InsertionSort;
+import com.learn.algorithm.sort.support.MyUnknowSort;
 import learn.algorithm.sort.util.ArrayGet;
 import learn.algorithm.sort.util.ArrayUtil;
 import com.learn.algorithm.sort.Sort;
@@ -23,9 +25,20 @@ public class SortCheck {
         testSort(new BubbleSort());
     }
 
+
     @Test
     public void testSelectionSort() throws Exception {
         testSort(new SelectionSort());
+    }
+
+    @Test
+    public void testInsertionSort() throws Exception {
+        testSort(new InsertionSort());
+    }
+
+    @Test
+    public void testUnknowSort() throws Exception {
+        testSort(new MyUnknowSort());
     }
 
     private void testSort(Sort mySort) throws Exception {

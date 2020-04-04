@@ -1,11 +1,9 @@
 package learn.algorithm.sort;
 
+import com.learn.algorithm.sort.support.*;
 import learn.algorithm.sort.util.ArrayGet;
 import learn.algorithm.sort.util.ArrayUtil;
 import com.learn.algorithm.sort.Sort;
-import com.learn.algorithm.sort.support.ArraySort;
-import com.learn.algorithm.sort.support.BubbleSort;
-import com.learn.algorithm.sort.support.SelectionSort;
 import org.junit.Test;
 
 /**
@@ -92,6 +90,8 @@ public class SortCompare {
                 new BubbleSort()
                 , new SelectionSort()
                 , new ArraySort()
+                , new InsertionSort()
+                , new MyUnknowSort()
         };
         return sorts;
     }

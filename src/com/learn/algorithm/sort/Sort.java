@@ -1,5 +1,7 @@
 package com.learn.algorithm.sort;
 
+import java.util.Arrays;
+
 public abstract class Sort {
 
     public synchronized int[] sortPrintArrayInfos(int... arr) {
@@ -33,4 +35,5 @@ public abstract class Sort {
         arr[rpoint] = arr[lpoint];
         arr[lpoint] = temp;
     }
+
 }

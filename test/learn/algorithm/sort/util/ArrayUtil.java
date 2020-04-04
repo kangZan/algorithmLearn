@@ -1,5 +1,7 @@
 package learn.algorithm.sort.util;
 
+import com.learn.algorithm.sort.Sort;
+
 /**
  * @program: algorithmLearn
  * @Description: TODO
@@ -21,6 +23,10 @@ public class ArrayUtil {
         }
         for (int i = 0; i < rightArr.length; i++) {
             if (rightArr[i] != leftArr[i]) {
+                Sort.printArr(leftArr);
+                System.out.println(i + ":" + leftArr[i]);
+                Sort.printArr(rightArr);
+                System.out.println(i + ":" + rightArr[i]);
                 throw new Exception();
             }
         }
