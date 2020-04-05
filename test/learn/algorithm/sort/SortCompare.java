@@ -91,6 +91,7 @@ public class SortCompare {
                 , new SelectionSort()
                 , new ArraySort()
                 , new InsertionSort()
+                , new ShellSort()
                 , new MyUnknowSort()
         };
         return sorts;

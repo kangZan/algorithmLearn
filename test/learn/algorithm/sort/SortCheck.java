@@ -1,12 +1,9 @@
 package learn.algorithm.sort;
 
-import com.learn.algorithm.sort.support.InsertionSort;
-import com.learn.algorithm.sort.support.MyUnknowSort;
+import com.learn.algorithm.sort.support.*;
 import learn.algorithm.sort.util.ArrayGet;
 import learn.algorithm.sort.util.ArrayUtil;
 import com.learn.algorithm.sort.Sort;
-import com.learn.algorithm.sort.support.BubbleSort;
-import com.learn.algorithm.sort.support.SelectionSort;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -32,6 +29,16 @@ public class SortCheck {
     }
 
     @Test
+    public void testArraySort() throws Exception {
+        testSort(new ArraySort());
+    }
+
+    @Test
+    public void testShellSort() throws Exception {
+        testSort(new ShellSort());
+    }
+
+    @Test
     public void testInsertionSort() throws Exception {
         testSort(new InsertionSort());
     }
@@ -43,7 +50,7 @@ public class SortCheck {
 
     private void testSort(Sort mySort) throws Exception {
         for (int k = 0; k < 10000; k++) {
-            int[] systemSortArr = ArrayGet.getRandomHundredArr();
+            int[] systemSortArr = ArrayGet.getRandomThousandArr();
             int[] mySortArr = ArrayUtil.copyArray(systemSortArr);
             mySort.sort(mySortArr);
             Arrays.sort(systemSortArr);
